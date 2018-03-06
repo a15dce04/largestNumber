@@ -1,31 +1,55 @@
 <html>
 <head>
-<h1>Greatest Among Three Numbers</h1>
-</head>
-<body>
-<script type="text/javascript">
-var a=10,b=20,c=7;
-
-/* checks a>b and a>c  if  both conditions satisfied, A is greater */
-
-if (a>b  && a>c)
+<title>
+Javascript Program to find greatest and smallest from 3 numbers
+<script language="javascript">
+function greater()
 {
-document.write("<b>A is greater</b>");
-}
-
-/* checks b>a  and b>c  if  both conditions satisfied, b is greater */
-
-if (b>a  && b>c)
+var num1=parseInt(document.f1.t1.value);
+var num2=parseInt(document.f1.t2.value);
+var num3=parseInt(document.f1.t3.value);
+if(num1>num2 && num1>num3)
 {
-document.write("<b>B is greater</b>");
+alert(num1 +"  is greatest number");
 }
-
-/* if the above two conditions were false c is greater*/
-
+else if(num2>num1 && num2>num3)
+{
+alert(num2 +"  is greatest number");
+}
 else
 {
-document.write("<b>C is greater</b>");
+alert(num3 +"  is greatest number");
+}
+}
+function smaller()
+{
+var num1=parseInt(document.f1.t1.value);
+var num2=parseInt(document.f1.t2.value);
+var num3=parseInt(document.f1.t3.value);
+if(num1<num2 && num1<num3)
+{
+alert(num1 +"  is smallest number");
+}
+else if(num2<num1 && num2<num3)
+
+{
+alert(num2 +"  is smallest number");
+}
+else
+{
+alert(num3 +"  is smallest number");
+}
 }
 </script>
+</head>
+<body>
+<h1 align="center"><font color="red">Javascript for find greatest and smallest</font></h1>
+<form name=f1>
+num1: <input type="textbox" name=t1><br>
+num2: <input type="textbox" name=t2><br>
+num3: <input type="textbox" name=t3><br><br><br>
+<input type="button" value="greatest" onclick="greater()" >
+<input type="button" value="smallest" onclick="smaller()">
+</form>
 </body>
 </html>
