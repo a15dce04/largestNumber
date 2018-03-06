@@ -1,55 +1,35 @@
-<html>
 <head>
-<title>
-Javascript Program to find greatest and smallest from 3 numbers
-<script language="javascript">
-function greater()
-{
-var num1=parseInt(document.f1.t1.value);
-var num2=parseInt(document.f1.t2.value);
-var num3=parseInt(document.f1.t3.value);
-if(num1>num2 && num1>num3)
-{
-alert(num1 +"  is greatest number");
-}
-else if(num2>num1 && num2>num3)
-{
-alert(num2 +"  is greatest number");
-}
-else
-{
-alert(num3 +"  is greatest number");
-}
-}
-function smaller()
-{
-var num1=parseInt(document.f1.t1.value);
-var num2=parseInt(document.f1.t2.value);
-var num3=parseInt(document.f1.t3.value);
-if(num1<num2 && num1<num3)
-{
-alert(num1 +"  is smallest number");
-}
-else if(num2<num1 && num2<num3)
-
-{
-alert(num2 +"  is smallest number");
-}
-else
-{
-alert(num3 +"  is smallest number");
-}
-}
-</script>
+<title>Maximum Number</title>
 </head>
+
 <body>
-<h1 align="center"><font color="red">Javascript for find greatest and smallest</font></h1>
-<form name=f1>
-num1: <input type="textbox" name=t1><br>
-num2: <input type="textbox" name=t2><br>
-num3: <input type="textbox" name=t3><br><br><br>
-<input type="button" value="greatest" onclick="greater()" >
-<input type="button" value="smallest" onclick="smaller()">
-</form>
+<center><h2>Maximum Number</h2>
+<script language="Javascript" type="text/javascript"> 
+
+function Max(num1, num2,num3)
+{
+var largest=arguments[num1, num2, num3]
+for (i=0; i<arguments.length; i++)
+{
+if ((num1>num2)&&(num1>num3))
+largest=num1
+else if((num2>num1)&&(num2>num3))
+largest=num2
+else
+largest=num3
+}
+return(largest)
+}
+
+document.write("</br>")
+var num1=prompt("Enter the first number: ", "")
+var num2=prompt("Enter the second number: ", "")
+var num3=prompt("Enter the third number: ", "")
+var max= Max(num1, num2, num3)
+document.write("You entered: ", num1, ", ", num2, ", ", num3)
+document.write("</br>")
+document.write("The Maximum number is: ", max)
+</script></center>
+
 </body>
 </html>
